@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>project 78</title>
+    </head>
+    <body>
+        <h1>Family book</h1>
+        <div>
+        <img id= "album" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5s6XZczj9XEpcZOFSrYU2_UVlrKleEUtdaw&usqp=CAU">
+        </div>
+        <div>
+        <h4 id="family_member_name">The family book</h4>
+        </div>
+        <div>
+            <button type="button" onclick= "update();">
+             Next
+            </button>
+        </div>
+        <style>
+            body{
+                text-align: center;
+                }
+            #album{
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+        <script>
+            var images= [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5s6XZczj9XEpcZOFSrYU2_UVlrKleEUtdaw&usqp=CAU", "https://www.seekpng.com/png/detail/373-3730186_brother-big-brother-and-little-brother-cartoon.png", "https://www.nicepng.com/png/detail/35-351393_first-visit-mother-and-baby-cartoon-png.png", "https://us.123rf.com/450wm/ylivdesign/ylivdesign1605/ylivdesign160500244/56085314-dad-icon-in-cartoon-style-on-a-white-background.jpg?ver=6"
+            ];
+            var member= [
+                "The family book",
+                "Brother",
+                "Mother",
+                "father"
+            ];
+            var i= 0;
+            function update() {
+                document.getElementById("album").src= images[i];
+
+                document.getElementById("family_member_name").innerHTML= member[i];
+
+                i++;
+                if (i>3){i=0};
+            }
+        </script>
+    </body>
+</html>
